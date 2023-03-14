@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "L9cFjmNkqZ+hnNZJ9MFerjIXxQDh8wE0WfySmsX3XVVSMtEIgOVUR5L1Pltj1qGeO9iTUsMf+mPr1loYxcfYAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\edubo\\Desktop\\Windows form com .NET CORE\\01.Formularios\\ComponentesVisuais\\ComponentesVisuais.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edubo\\.nuget\\packages\\maroquio.util.sortablebindinglist\\1.1.0\\maroquio.util.sortablebindinglist.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

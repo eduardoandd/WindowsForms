@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ComponentesVisuais/1.0.0": {
+        "dependencies": {
+          "Maroquio.Util.SortableBindingList": "1.1.0"
+        },
+        "runtime": {
+          "ComponentesVisuais.dll": {}
+        }
+      },
+      "Maroquio.Util.SortableBindingList/1.1.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Maroquio.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ComponentesVisuais/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Maroquio.Util.SortableBindingList/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TDAp0jCU4WxgdEIrm2D668Ndc3vBFZIR/YOFN444Y81tsxAYGwkaXylT4WHptz7IE7cneXF9FVr2LwgybvoiZw==",
+      "path": "maroquio.util.sortablebindinglist/1.1.0",
+      "hashPath": "maroquio.util.sortablebindinglist.1.1.0.nupkg.sha512"
+    }
+  }
+}

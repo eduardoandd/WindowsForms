@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pu8qT6ZbyTh+6j+z28mqwhJYfK/o3Gs+5gliPda2DiLzjrAqIhRWGVK6jW5nUdTSKDIhe8g6S48gc/aVj5r+pQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\edubo\\Desktop\\Windows form com .NET CORE\\01.Formularios\\PersitenciaDeArquivos\\PersitenciaDeArquivos.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\edubo\\.nuget\\packages\\maroquio.util.windowsforms.simplemessagebox\\0.9.1\\maroquio.util.windowsforms.simplemessagebox.0.9.1.nupkg.sha512"
+  ],
+  "logs": []
+}

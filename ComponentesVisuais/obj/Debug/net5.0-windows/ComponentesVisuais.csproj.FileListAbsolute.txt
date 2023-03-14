@@ -1,0 +1,22 @@
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.exe
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.deps.json
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.runtimeconfig.json
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.runtimeconfig.dev.json
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\ComponentesVisuais.pdb
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.csproj.AssemblyReference.cache
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.form.resources
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.csproj.GenerateResource.cache
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.AssemblyInfoInputs.cache
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.AssemblyInfo.cs
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.csproj.CoreCompileInputs.cache
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\refint\ComponentesVisuais.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.pdb
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.genruntimeconfig.cache
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ref\ComponentesVisuais.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\Maroquio.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.csproj.CopyComplete
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\obj\Debug\net5.0-windows\ComponentesVisuais.FormProduto.resources
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\ComponentesVisuais\bin\Debug\net5.0-windows\_Virgil van Dijk .png
