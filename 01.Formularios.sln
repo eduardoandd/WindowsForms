@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComponentesVisuais", "Compo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersitenciaDeArquivos", "PersitenciaDeArquivos\PersitenciaDeArquivos.csproj", "{9A8258E9-1A07-4306-B8E9-F1C87CD86139}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoDeDadosSQL", "BancoDeDadosSQL\BancoDeDadosSQL.csproj", "{C625BBE2-A9D4-4E82-831C-13F55B140B5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstoqueComEF5", "EstoqueComEF5\EstoqueComEF5.csproj", "{C4C3A99D-8A03-4507-A3FD-44677D676F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{9A8258E9-1A07-4306-B8E9-F1C87CD86139}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A8258E9-1A07-4306-B8E9-F1C87CD86139}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A8258E9-1A07-4306-B8E9-F1C87CD86139}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C625BBE2-A9D4-4E82-831C-13F55B140B5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C625BBE2-A9D4-4E82-831C-13F55B140B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C625BBE2-A9D4-4E82-831C-13F55B140B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C625BBE2-A9D4-4E82-831C-13F55B140B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C3A99D-8A03-4507-A3FD-44677D676F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C3A99D-8A03-4507-A3FD-44677D676F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C3A99D-8A03-4507-A3FD-44677D676F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C3A99D-8A03-4507-A3FD-44677D676F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -50,6 +50,7 @@
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // btnAtualizarExibir
             // 
@@ -59,6 +60,7 @@
             this.btnAtualizarExibir.TabIndex = 4;
             this.btnAtualizarExibir.Text = "Atualia e Exibir";
             this.btnAtualizarExibir.UseVisualStyleBackColor = true;
+            this.btnAtualizarExibir.Click += new System.EventHandler(this.btnAtualizarExibir_Click);
             // 
             // btnConsultaLimiteMedio
             // 
@@ -68,6 +70,7 @@
             this.btnConsultaLimiteMedio.TabIndex = 5;
             this.btnConsultaLimiteMedio.Text = "Consultar Limite Médio";
             this.btnConsultaLimiteMedio.UseVisualStyleBackColor = true;
+            this.btnConsultaLimiteMedio.Click += new System.EventHandler(this.btnConsultaLimiteMedio_Click);
             // 
             // btnInserir
             // 
@@ -97,6 +100,7 @@
             this.btnAtualizar.TabIndex = 9;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // btnExcluir
             // 
@@ -106,6 +110,7 @@
             this.btnExcluir.TabIndex = 10;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCriar
             // 
@@ -144,7 +149,9 @@
             this.grdClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdClientes.Location = new System.Drawing.Point(163, 46);
             this.grdClientes.Name = "grdClientes";
+            this.grdClientes.RowHeadersWidth = 51;
             this.grdClientes.RowTemplate.Height = 25;
+            this.grdClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdClientes.Size = new System.Drawing.Size(605, 353);
             this.grdClientes.TabIndex = 13;
             // 
