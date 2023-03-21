@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddCategoria = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -37,6 +41,10 @@
             this.btnExcluirGrd = new System.Windows.Forms.Button();
             this.btnAddGrd = new System.Windows.Forms.Button();
             this.grdCategoria = new System.Windows.Forms.DataGridView();
+            this.clmCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPreco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEstoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grdCategoria)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +54,7 @@
             this.btnAddCategoria.Location = new System.Drawing.Point(188, 35);
             this.btnAddCategoria.Name = "btnAddCategoria";
             this.btnAddCategoria.Size = new System.Drawing.Size(36, 23);
-            this.btnAddCategoria.TabIndex = 0;
+            this.btnAddCategoria.TabIndex = 1;
             this.btnAddCategoria.Text = "Add";
             this.btnAddCategoria.UseVisualStyleBackColor = true;
             this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
@@ -56,7 +64,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(272, 36);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(36, 23);
-            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.TabIndex = 3;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -66,7 +74,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(230, 35);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(36, 23);
-            this.btnAlterar.TabIndex = 5;
+            this.btnAlterar.TabIndex = 2;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -79,7 +87,8 @@
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(159, 23);
             this.cbxCategoria.Sorted = true;
-            this.cbxCategoria.TabIndex = 6;
+            this.cbxCategoria.TabIndex = 0;
+            this.cbxCategoria.SelectedIndexChanged += new System.EventHandler(this.cbxCategoria_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -92,39 +101,106 @@
             // 
             // btnAlterarGrd
             // 
-            this.btnAlterarGrd.Location = new System.Drawing.Point(551, 97);
+            this.btnAlterarGrd.Location = new System.Drawing.Point(321, 97);
             this.btnAlterarGrd.Name = "btnAlterarGrd";
             this.btnAlterarGrd.Size = new System.Drawing.Size(36, 23);
-            this.btnAlterarGrd.TabIndex = 10;
+            this.btnAlterarGrd.TabIndex = 5;
             this.btnAlterarGrd.Text = "Alterar";
             this.btnAlterarGrd.UseVisualStyleBackColor = true;
+            this.btnAlterarGrd.Click += new System.EventHandler(this.btnAlterarGrd_Click);
             // 
             // btnExcluirGrd
             // 
-            this.btnExcluirGrd.Location = new System.Drawing.Point(593, 98);
+            this.btnExcluirGrd.Location = new System.Drawing.Point(363, 98);
             this.btnExcluirGrd.Name = "btnExcluirGrd";
             this.btnExcluirGrd.Size = new System.Drawing.Size(36, 23);
-            this.btnExcluirGrd.TabIndex = 9;
+            this.btnExcluirGrd.TabIndex = 6;
             this.btnExcluirGrd.Text = "Exclui";
             this.btnExcluirGrd.UseVisualStyleBackColor = true;
+            this.btnExcluirGrd.Click += new System.EventHandler(this.btnExcluirGrd_Click);
             // 
             // btnAddGrd
             // 
-            this.btnAddGrd.Location = new System.Drawing.Point(509, 97);
+            this.btnAddGrd.Location = new System.Drawing.Point(279, 97);
             this.btnAddGrd.Name = "btnAddGrd";
             this.btnAddGrd.Size = new System.Drawing.Size(36, 23);
-            this.btnAddGrd.TabIndex = 8;
+            this.btnAddGrd.TabIndex = 4;
             this.btnAddGrd.Text = "Ad";
             this.btnAddGrd.UseVisualStyleBackColor = true;
+            this.btnAddGrd.Click += new System.EventHandler(this.btnAddGrd_Click);
             // 
             // grdCategoria
             // 
+            this.grdCategoria.AllowUserToAddRows = false;
+            this.grdCategoria.AllowUserToDeleteRows = false;
+            this.grdCategoria.AllowUserToResizeColumns = false;
+            this.grdCategoria.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdCategoria.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCategoria.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmCodigo,
+            this.clmNome,
+            this.clmPreco,
+            this.clmEstoque});
             this.grdCategoria.Location = new System.Drawing.Point(12, 128);
             this.grdCategoria.Name = "grdCategoria";
+            this.grdCategoria.ReadOnly = true;
+            this.grdCategoria.RowHeadersVisible = false;
             this.grdCategoria.RowTemplate.Height = 25;
-            this.grdCategoria.Size = new System.Drawing.Size(622, 215);
-            this.grdCategoria.TabIndex = 11;
+            this.grdCategoria.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdCategoria.Size = new System.Drawing.Size(386, 215);
+            this.grdCategoria.TabIndex = 7;
+            this.grdCategoria.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCategoria_CellDoubleClick);
+            // 
+            // clmCodigo
+            // 
+            this.clmCodigo.DataPropertyName = "iDpRODUTO";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Format = "D4";
+            this.clmCodigo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.clmCodigo.HeaderText = "Codigo";
+            this.clmCodigo.Name = "clmCodigo";
+            this.clmCodigo.ReadOnly = true;
+            this.clmCodigo.Width = 70;
+            // 
+            // clmNome
+            // 
+            this.clmNome.DataPropertyName = "Nome";
+            this.clmNome.HeaderText = "Nome do Produto";
+            this.clmNome.Name = "clmNome";
+            this.clmNome.ReadOnly = true;
+            this.clmNome.Width = 150;
+            // 
+            // clmPreco
+            // 
+            this.clmPreco.DataPropertyName = "Preco";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "C2";
+            this.clmPreco.DefaultCellStyle = dataGridViewCellStyle3;
+            this.clmPreco.HeaderText = "Preço";
+            this.clmPreco.Name = "clmPreco";
+            this.clmPreco.ReadOnly = true;
+            this.clmPreco.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmPreco.Width = 80;
+            // 
+            // clmEstoque
+            // 
+            this.clmEstoque.DataPropertyName = "Estoque";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "D4";
+            this.clmEstoque.DefaultCellStyle = dataGridViewCellStyle4;
+            this.clmEstoque.HeaderText = "Estoque";
+            this.clmEstoque.Name = "clmEstoque";
+            this.clmEstoque.ReadOnly = true;
+            this.clmEstoque.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmEstoque.Width = 70;
             // 
             // label2
             // 
@@ -139,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 450);
+            this.ClientSize = new System.Drawing.Size(470, 353);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grdCategoria);
             this.Controls.Add(this.btnAlterarGrd);
@@ -152,6 +228,7 @@
             this.Controls.Add(this.btnAddCategoria);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdCategoria)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,5 +247,9 @@
         private System.Windows.Forms.DataGridView grdCategoria;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPreco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEstoque;
     }
 }

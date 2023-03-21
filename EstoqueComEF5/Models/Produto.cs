@@ -15,6 +15,7 @@ namespace EstoqueComEF5.Models
 
         [Required, MaxLength(100)]
         public string Nome { get; set; }
+        public int Estoque { get; set; }
         public double Preco { get; set; }
 
 

@@ -19,13 +19,41 @@ namespace EstoqueComEF5
         public Form1()
         {
             InitializeComponent();
-            using (var db = new EstoqueContext())
-            {
-                
-                AtualizarCategoria(db);
-            }
+            
             
         }
+
+        private void AtualizarCategoria(EstoqueContext db)
+        {
+
+            cbxCategoria.DataSource = db.Categorias.ToList();
+            cbxCategoria.DisplayMember = "Nome";
+            cbxCategoria.ValueMember = "IdCategoria";
+        }
+
+        private void AtualizarProdutos(EstoqueContext db)
+        {
+            if(cbxCategoria.Items.Count > 0)
+            {
+                this.Cursor = Cursors.WaitCursor;
+
+                int idCategoria = (cbxCategoria.SelectedItem as Categoria).IdCategoria; //capturando o id do objeto categoria
+                grdCategoria.DataSource = db.Produtos.
+                    Where(x => x.IdCategoria == idCategoria).
+                    Include(x => x.Categoria).ToList();
+                grdCategoria.Columns.Remove(grdCategoria.Columns["IdCategoria"]);
+                grdCategoria.Columns.Remove(grdCategoria.Columns["Categoria"]);
+                grdCategoria.Columns["clmCodigo"].HeaderCell.Style.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                grdCategoria.Columns["clmPreco"].HeaderCell.Style.Alignment =
+                    grdCategoria.Columns["clmEstoque"].HeaderCell.Style.Alignment =
+                    DataGridViewContentAlignment.MiddleCenter;
+                
+
+                this.Cursor = Cursors.Default;
+            }
+        }
+
 
         private void btnAddCategoria_Click(object sender, EventArgs e)
         {
@@ -45,14 +73,6 @@ namespace EstoqueComEF5
                     }
                 }
             }
-        }
-
-        private void AtualizarCategoria(EstoqueContext db)
-        {
-            
-            cbxCategoria.DataSource = db.Categorias.ToList();
-            cbxCategoria.DisplayMember = "Nome";
-            cbxCategoria.ValueMember = "IdCategoria";
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -107,6 +127,115 @@ namespace EstoqueComEF5
                     else
                     {
                         SimpleMessage.Error("Não é possivel excluir uma categoria com produtos.");
+                    }
+                }
+            }
+        }
+
+        private void btnAddGrd_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormProduto())
+            {
+                form.Text = "Adição de Produto....";
+                form.cbxCategoria.SelectedIndex = cbxCategoria.SelectedIndex;
+                if (form.ShowDialog() == DialogResult.OK) 
+                {
+                    using(var db = new EstoqueContext())
+                    {
+                        Produto produto = new Produto();
+                        produto.Nome = form.txtNome.Text;
+                        produto.Estoque = Convert.ToInt32(form.ndEstoque.Value);
+                        produto.Preco = Convert.ToDouble(form.ndPreco.Value);
+                        produto.IdCategoria = 
+                            (form.cbxCategoria.SelectedItem as Categoria).IdCategoria;
+                        db.Produtos.Add(produto);
+                        db.SaveChanges();
+                        AtualizarProdutos(db);
+                        SimpleMessage.Inform("Produto adicionado com sucesso.", "Informação");
+
+                    }
+                }
+            }
+        }
+
+        private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using(var db = new EstoqueContext())
+            {
+                AtualizarProdutos(db);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (var db = new EstoqueContext())
+            {
+
+                AtualizarCategoria(db);
+                AtualizarProdutos(db); 
+            }
+        }
+
+        private void btnAlterarGrd_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow linhaSelecioanda = null;
+            if(grdCategoria.SelectedRows.Count> 0)
+            {
+                linhaSelecioanda = grdCategoria.SelectedRows[0]; //capturando a linha selecionada
+                Produto produto = linhaSelecioanda.DataBoundItem as Produto;
+                using (var form = new FormProduto())
+                {
+                    form.Text = "Alteração de Produto...";
+                    form.txtNome.Text = produto.Nome;
+                    form.ndEstoque.Value = produto.Estoque;
+                    form.ndPreco.Value = Convert.ToDecimal(produto.Preco);
+                    form.cbxCategoria.SelectedIndex =
+                        form.cbxCategoria.FindString(produto.Categoria.Nome);
+                    if(form.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var db = new EstoqueContext())
+                        {
+                            produto.Nome = form.txtNome.Text;
+                            produto.Estoque = Convert.ToInt32(form.ndEstoque.Value);
+                            produto.Preco = Convert.ToDouble(form.ndPreco.Value);
+                            produto.Categoria.IdCategoria = (form.cbxCategoria.SelectedItem as Categoria).IdCategoria;
+
+                            db.Produtos.Attach(produto);
+                            db.Entry(produto).State = EntityState.Modified;
+                            db.SaveChanges();
+                            AtualizarProdutos(db);
+                            SimpleMessage.Inform("Produto alterado com sucesso.", "Informação");
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        private void grdCategoria_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnAlterarGrd_Click(null, null);
+        }
+
+        private void btnExcluirGrd_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow linhaSelecionada = null;
+            if(grdCategoria.SelectedRows.Count > 0)
+            {
+                linhaSelecionada = grdCategoria.SelectedRows[0];
+                Produto produto = linhaSelecionada.DataBoundItem as Produto;
+                if(SimpleMessage.Confirm(
+                    "Deseja realmente excluir o produto selecionado?",
+                    "Exclusão de Produto"))
+                {
+                    using (var db = new EstoqueContext())
+                    {
+                        db.Produtos.Attach(produto);
+                        db.Entry(produto).State = EntityState.Deleted;
+                        db.SaveChanges();
+                        AtualizarProdutos(db);
+                        SimpleMessage.Inform("Produto excluido com sucesso.", "Informação");
                     }
                 }
             }

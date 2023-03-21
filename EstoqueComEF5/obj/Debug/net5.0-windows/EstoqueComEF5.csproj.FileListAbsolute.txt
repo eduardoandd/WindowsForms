@@ -112,3 +112,4 @@ C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\EstoqueComEF5\o
 C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\EstoqueComEF5\obj\Debug\net5.0-windows\EstoqueComEF5.pdb
 C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\EstoqueComEF5\obj\Debug\net5.0-windows\EstoqueComEF5.genruntimeconfig.cache
 C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\EstoqueComEF5\obj\Debug\net5.0-windows\ref\EstoqueComEF5.dll
+C:\Users\edubo\Desktop\Windows form com .NET CORE\01.Formularios\EstoqueComEF5\obj\Debug\net5.0-windows\EstoqueComEF5.FormProduto.resources
